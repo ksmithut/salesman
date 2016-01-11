@@ -1,0 +1,3 @@
+test/*.js
+lib/**/__tests__/*.js
+--require test/setup/chai
