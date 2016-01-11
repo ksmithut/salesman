@@ -43,12 +43,25 @@ Coming Soon!
 import salesman from 'salesman';
 
 salesman.connect({
+  defaultTenant: 'prod',
+  defaults: {
+    maxConnectionTime: 10 * 60 * 60 * 1000, // 10 hours
+    connection: {
+      loginUrl: 'https://test.salesforce.com',
+    },
+  },
   tenants: {
+    dev: {
+      username: '',
+      password: '',
+      connection: {
+        accessToken: '',
+      },
+    },
     int: {
       username: '',
       password: '',
       connection: {
-        loginUrl: 'https://test.salesforce.com',
         accessToken: '',
       },
     },
@@ -61,7 +74,6 @@ salesman.connect({
       },
     }],
   },
-  default: 'prod',
 });
 ```
 

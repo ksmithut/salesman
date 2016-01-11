@@ -8,6 +8,11 @@
   },
   "author": "ksmithut",
   "license": "MIT",
+  "engine-strict": true,
+  "engines": {
+    "node": ">=4.2.3",
+    "npm": ">=2.0.0"
+  },
   "devDependencies": {
     "chai": "^3.4.1",
     "chai-as-promised": "^5.2.0",
@@ -18,5 +23,10 @@
     "mocha": "^2.3.4",
     "mocha-lcov-reporter": "^1.0.0",
     "nock": "^5.2.1"
+  },
+  "dependencies": {
+    "arrify": "^1.0.1",
+    "jsforce": "^1.5.0",
+    "merge": "^1.2.0"
   }
 }
