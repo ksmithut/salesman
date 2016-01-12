@@ -4,7 +4,7 @@
   "description": "A Salesforce ORM for Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover _mocha"
   },
   "author": "ksmithut",
   "license": "MIT",
