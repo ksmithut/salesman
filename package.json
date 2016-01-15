@@ -4,7 +4,8 @@
   "description": "A Salesforce ORM for Node",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha"
+    "test": "istanbul cover _mocha",
+    "lint": "eslint ."
   },
   "author": "ksmithut",
   "license": "MIT",
