@@ -1,9 +1,11 @@
 'use strict';
 
-var Schema = require('./lib/schema');
-var Salesman = require('./lib/salesman');
+const Schema = require('./lib/schema');
+const Salesman = require('./lib/salesman');
 
-module.exports = exports = new Salesman();
+const salesman = new Salesman();
+
+module.exports = exports = salesman;
 
 exports.Schema = Schema;
 exports.Salesman = Salesman;
