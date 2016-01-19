@@ -5,6 +5,6 @@
   },
   "extends": "eslint-config-ksmithut",
   "rules": {
-
+    "valid-jsdoc": 0
   }
 }
