@@ -5,6 +5,7 @@
   },
   "extends": "eslint-config-ksmithut",
   "rules": {
-    "valid-jsdoc": 0
+    "valid-jsdoc": 0,
+    "curly": [ 2, "multi-or-nest", "consistent" ]
   }
 }
