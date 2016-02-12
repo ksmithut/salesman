@@ -1,6 +1,6 @@
 {
   "name": "salesman",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Salesforce ORM for Node",
   "main": "index.js",
   "scripts": {
