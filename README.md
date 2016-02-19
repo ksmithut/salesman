@@ -45,7 +45,7 @@ salesman.connect({
   },
 });
 
-const LeadSchema = new saline.Schema('Lead', {
+const LeadSchema = new salesman.Schema('Lead', {
   id: 'Id',
   contact: {
     firstName: 'FirstName',
@@ -57,10 +57,10 @@ const LeadSchema = new saline.Schema('Lead', {
   },
 });
 
-const Lead = saline.model('Lead', LeadSchema);
+const Lead = salesman.model('Lead', LeadSchema);
 // or
-saline.model('Lead', LeadSchema);
-const Lead = saline.getModel('Lead');
+salesman.model('Lead', LeadSchema);
+const Lead = salesman.getModel('Lead');
 
 Lead
   .find()
@@ -197,7 +197,32 @@ const AttachmentSchema = new salesman.Schema('Attachment', {
   columnKey: '$column'
 });
 
-const Lead = saline.model('Lead', LeadSchema);
-const Attachment = saline.model('Attachment', AttachmentSchema);
+const Lead = salesman.model('Lead', LeadSchema);
+const Attachment = salesman.model('Attachment', AttachmentSchema);
 
 ```
+
+## salesman.model(modelName, schema)
+
+### Params
+
+* `modelName` (String) - The name you want to give to the model. This will be
+  used in relationship lookups.
+* `schema` (Schema) - The salesman Schema object you wish to be converted into a
+  model.
+
+Returns the new Model. More on models later.
+
+## salesman.getModel(modelName)
+
+### Params
+
+* `modelName` (String) - The name of the model you wish to retrieve.
+
+Returns the model that was attached to this salesman connection.
+
+# Schemas
+
+Schemas are your definition for how you want to interact with your data. They
+are reusable, and should be reused if you have multiple salesforce tenants you
+wish to work with.
